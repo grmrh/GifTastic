@@ -5,9 +5,11 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
+
     <link href="assets/css/Flatly/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
@@ -21,9 +23,7 @@
                 <div class="row">
                     <div class="col-sm-8 col-md-7 py-4">
                         <h4 class="text-white">About</h4>
-                        <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it
-                            a few sentences long so folks can pick up some informative tidbits. Then, link them off to some
-                            social networking sites or contact information.</p>
+                        <p class="text-muted">This site allows you to download Giphy images using API provided by GIPHY.com.</p>
                     </div>
                     <div class="col-sm-4 offset-md-1 py-4">
                         <h4 class="text-white">Contact</h4>
@@ -60,49 +60,61 @@
         </div>
     </header>
     <main role="main">
-        <section class="jumbotron">
-            <div class="container text-center">
-                <h2 class="jumbotron-heading">Giphy categories</h2>
-                <p class="lead topic-view"></p>
-            </div>
+        <section class="jumbotron text-center">
             <div class="container">
                 <form>
                     <fieldset>
-                        <div class="form-group row">
-                            <label for="gifTopicSelect" class="col-sm-4 col-form-label col-form-label-lg">Additional Giphy</label>
-                            <div class="col-sm-8">
-                                <select class="form-control" id="gifTopicSelect">
-                                    <option>movie</option>
-                                    <option>show</option>
-                                    <option>thesimpsons</option>
-                                    <option>spongebobsquarepants</option>
-                                    <option>5</option>
-                                </select>
-                                <input type="text" class="form-control mt-2" id="gifTopicInput" placeholder="Or enter here">
-                                <button type="button" class="btn btn-primary mt-2" id="addGifBtn">Add</button>
+                        <div class="card text-white bg-primary mb-3 pb-0">
+                            <div class="card-header"></div>
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <label for="gifCategorySelect" class="col-sm-3 col-form-label col-form-label-lg">Additional Giphy</label>
+                                    <div class="col-sm-3">
+                                        <select class="form-control" id="gifCategorySelect">
+                                        </select>
+                                    </div>
+                                    <!-- <label for="gifTopicSelect" class="col-sm-3 col-form-label col-form-label-lg"></label> -->
+                                    <div class="col-sm-3">
+                                        <select class="form-control" id="gifTopicSelect">
+                                        </select>
+                                        <!-- <input type="text" class="form-control mt-2" id="gifTopicInput" placeholder="Or enter here"> -->
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button type="button" class="btn btn-success mt-2" id="addGifBtn">Add</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </fieldset>
                 </form>
             </div>
+            <div class="container">
+                <h1 class="jumbotron-heading text-left">Giphy by category</h1>
+            </div>
+            <div class="container">
+                <div class="row lead topic-view">
+                </div>
+            </div>
         </section>
+
         <div class="py-5 bg-light">
+
             <div class="container">
                 <div class="row gif-placeholder">
                 </div>
             </div>
         </div>
-    </main>
 
+    </main>
     <footer class="text-muted">
         <div class="container">
             <p class="float-right">
                 <a href="#">Back to top</a>
             </p>
-            <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-            <p>New to Bootstrap?
-                <a href="../../">Visit the homepage</a> or read our
-                <a href="../../getting-started/">getting started guide</a>.</p>
+            <p>The appliation is in use of other third party framework or library, such as &copy; Bootstrap, JQuery, GIPHY.COM, babel.js, Github.com.</p>
+            <p>
+                <!-- <a href="../../">Visit the homepage</a> or read our -->
+                <!-- <a href="../../getting-started/">getting started guide</a>.</p> -->
         </div>
     </footer>
 
@@ -114,10 +126,12 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
-    <!-- <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>    -->
-    <!-- <script src="assets/javascript/babel.min.js"></script> -->
-    <!-- <script src="assets/javascript/main.js" type="text/babel" data-presets="es2015,stage-2"></script> -->
-    <script src="assets/javascript/main.js" type="text/javascript" data-presets="es2015,stage-2"></script>
-</body>
+  
+    <!-- Although some part of the codes use ES6, babel.js is not downloaded when the web application runs
+    because of inconvenience that the app should be run in the localhost for test, not from the file. -->
+    <!-- <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script src="assets/javascript/babel.min.js"></script>
+    <script src="assets/javascript/main.js" type="text/babel" data-presets="es2015,stage-2"></script> -->
+    <script src="assets/javascript/main.js" type="text/javascript"></script>
 
 </html>
